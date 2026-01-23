@@ -1,5 +1,97 @@
 :root {
-    --primario: blue ;
+    --primario: rgb(156, 156, 212);
     --blanco: white;
-    
+    --gris: rgb(95, 93, 93);
+    --negro: black;
+
+    /** Fuentes principales **/
+    --fuentePrimaria: "Montserrat", sans-serif;
+    --fuenteSecundaria: "Birthstone Bounce", cursive;
+}
+
+/** Snipet **/
+/** "https://www.paulirish.com/2012/box-sizing-border-box-ftw/" **/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/** Globales **/
+body {
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+
+}
+
+h1 {
+    font-size: 8rem;
+    color: var(--negro);
+    font-family: var(--fuenteSecundaria);
+}
+
+p {
+    font-size: 1.8rem;
+    color: var(--blanco);
+
+}
+
+a {
+    text-decoration: none;
+
+}
+
+/** Navegación **/
+.navegacion__principal {
+    background-color: var(--blanco);
+    padding: 1rem;
+    display: flex;
+    /** Activa flexbox **/
+    align-items: center;
+    gap: 2rem;
+    font-family: var(--fuentePrimaria);
+
+}
+
+.navegacion__enlace:last-of-type {
+    margin-right: 0;
+}
+
+.logo__enlace--img {
+    display: block;
+    width: 20rem;
+    display: block;
+    margin: 0;
+}
+
+/** Primer contenedor **/
+.seccion1 {
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0;
+
+}
+
+.seccion1__contenedor {
+    width: 80%;
+    background-color: var(--blanco);
+    padding: 1rem;
+
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /** Separacion entre columnas y filas **/
+    column-gap: 2rem;
+    row-gap: 2rem;
+    /** Lo mismo per indicando en una sola linea de codigo **/
+    gap: 2rem;
 }
