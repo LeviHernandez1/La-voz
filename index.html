@@ -9,60 +9,66 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header class="header">
-        <div class="nav-dg">
-            <nav class="navegacion__principal">
-                <a class="logo__enlace" href="index.html">
-                    <img class="logo__enlace--img" src="img/logo_la_voz.png" alt="la_voz">
-                </a>
-                <a class="navegacion__enlace" href="#">acción</a>
-                <a class="navegacion__enlace" href="#">brújula</a>
-                <a class="navegacion__enlace" href="#">tiempo libre</a>
-                <a class="navegacion__enlace" href="#">crecimineto</a>
-                <a class="navegacion__enlace" href="#"> humor</a>
-                <a class="navegacion__enlace" href="#">conexión</a>
-            </nav>
-        </div>
+        <a class="header__logo" href="index.html">
+            <img class="header__logo--img" src="img/logo_la_voz.png" alt="la_voz">
+        </a>
     </header>
 
+    <nav class="navegacion">
+        <a class="navegacion__enlace navegacion__enlace--activo" href="accion.html">acción</a>
+        <a class="navegacion__enlace" href="#">brújula</a>
+        <a class="navegacion__enlace" href="#">tiempo libre</a>
+        <a class="navegacion__enlace" href="#">crecimiento</a>
+        <a class="navegacion__enlace" href="#"> humor</a>
+        <a class="navegacion__enlace" href="#">conexión</a>
+    </nav>
+
     <main>
+        <section class="iconsLinks">
+            <a target="_blank" href="https://www.facebook.com/ConsarMexico/?locale=es_LA">
+                <img class="icon" src="img/icons/facebook.png" alt="facebook">
+            </a>
+            <a target="_blank" arget="_blank"  href="https://x.com/consar_mx?lang=es">
+                <img class="icon" src="img/icons/twitterX.png" alt="X">
+            </a>
+            <a target="_blank" href="https://www.instagram.com/consar_mx/?hl=es">
+                <img class="icon" src="img/icons/instagram.png" alt="instagram">
+            </a>
+            <a target="_blank" href="https://www.youtube.com/user/CONSARMexico">
+                <img class="icon" src="img/icons/youtube.png" alt="youtube">
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/company/consar-mx/posts/?feedView=all">
+                <img class="icon" src="img/icons/linkedin.png" alt="linkedin">
+            </a>
+        </section>
+
         <section class="seccion1">
-            <div class="seccion1__contenedor">
-                <p>2026</p>
-                <h1>Enero</h1>
-                <button>
-                    cumpleaños
-                </button>
-            </div>
-        </section>
-
-        <seccion class="iconsLinks">
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-        </seccion>
-
-        <section>
-            <p>Cumpleaños</p>
-            <p>hora de celebrar</p>
-
-            <div class="grid"> <!-- .grid nos ayudara con la responsibilidad de la pagina -->
+            <div class="grid__caja">
+                <div >
+                    <p class="text__año">2026</p>
+                    <p class="cursiva">Enero</p>
+                </div>
+                
+                <a href="cumpleaños.html">
+                    <button>cumpleaños</button>
+                </a>
 
             </div>
         </section>
 
+        
     </main>
 
     <footer class="footer">
-        <p>Todos los derechos reservados.</p>
-        <P>Comision Nacional del Sistema de Ahorro Para el Retiro CONSAR</P>
+        <p class="footer__texto">Todos los derechos reservados -- <span>Comision Nacional del Sistema de Ahorro Para el
+                Retiro CONSAR</span></P>
     </footer>
 
 </body>

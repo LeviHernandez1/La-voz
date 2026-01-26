@@ -14,6 +14,7 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    /** 1 rem es 10px **/
 }
 
 *,
@@ -38,8 +39,9 @@ h1 {
 }
 
 p {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.8rem;
-    color: var(--blanco);
+    color: var(--negro);
 
 }
 
@@ -48,50 +50,198 @@ a {
 
 }
 
-/** Navegación **/
-.navegacion__principal {
-    background-color: var(--blanco);
-    padding: 1rem;
-    display: flex;
-    /** Activa flexbox **/
-    align-items: center;
-    gap: 2rem;
-    font-family: var(--fuentePrimaria);
+img {
+    max-width: 100%;
+}
 
+/* Cajas de contenidos principales */
+
+.cursiva,
+.seccion1__contenedor,
+.cursiva__cumpleaños{
+    margin: 0; /* margen para el texto*/
+    font-size: 8rem;
+    color: var(--negro);
+    font-family: var(--fuenteSecundaria);
+    margin: 0 0 1rem 0;
+}
+
+.texto__caja {
+    display: flex;
+    justify-content: center;
+    width: 22rem;
+    border: 2px solid black;
+    border-radius: 1rem;
+    background-color: var(--negro);
+}
+.texto__relleno {
+    margin: 0; /* Margen para el texto */
+    font-family: var(--fuentePrimaria);
+    text-transform: uppercase;
+    color: var(--blanco);
+    
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/** Header **/
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.header__logo {
+    width: 30rem;
+    height: auto;
+    margin: 0;
+    display: block;
+}
+
+.header__logo--img {
+    width: 100%;
+    display: block;
+}
+
+/** footer **/
+.footer {
+    background-color: var(--gris);
+    padding: 2rem 0;
+    margin-top: 1rem;
+    text-align: center;
+
+}
+
+.footer__texto {
+    font-family: var(--fuentePrimaria);
+    font-size: 1.5rem;
+}
+
+/** Navegación **/
+.navegacion {
+    background-color: var(--blanco);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+@media (max-width: 768px) {
+    .navegacion {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.navegacion__enlace {
+    font-family: var(--fuentePrimaria);
+    color: var(--negro);
+    font-size: 1.5rem;
+    text-transform: uppercase;
 }
 
 .navegacion__enlace:last-of-type {
     margin-right: 0;
 }
 
-.logo__enlace--img {
-    display: block;
-    width: 20rem;
-    display: block;
-    margin: 0;
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+    color: var(--primario);
 }
 
-/** Primer contenedor **/
+/** Enlaces a redes sociales **/
+
+.iconsLinks {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+    gap: 1rem;
+    padding: 3rem 0 0 0;
+    /** aplicamos solo espacio arriba**/
+}
+
+.icon {
+    width: 2rem;
+}
+
+/** Primer contenedor index **/
 .seccion1 {
     display: flex;
     justify-content: center;
-    padding: 5rem 0;
-
+    padding: 0 0 3rem 0;
 }
-
-.seccion1__contenedor {
-    width: 80%;
+.grid__caja {
+    display: grid;
+    grid-template-columns: repeat(2, ifr);
+    width: 90%;
     background-color: var(--blanco);
-    padding: 1rem;
-
+    padding: 1rem;   
 }
+@media (min-width: 768px) {
+    .grid__caja  {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.text__año {
+    display: flex;
+    justify-content: end;
+    font-family: var(--fuentePrimaria);
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/** GRID calendario cumpleaños **/
 
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /** Separacion entre columnas y filas **/
-    column-gap: 2rem;
-    row-gap: 2rem;
-    /** Lo mismo per indicando en una sola linea de codigo **/
-    gap: 2rem;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    padding: 0 0 3rem 0; /** Separacion abajo **/
 }
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(7, 1fr);
+    }
+}
+
+/** Cumpleaños **/
+
+.seccionCumpleaños {
+    width: 90%;
+    margin: 0 auto;
+}
+.calendario {
+    background-color: var(--gris);
+    padding: 1rem;
+}
+
+.cumpleaños {
+    background-color: var(--blanco);
+    padding: 0.5rem;
+}
+.nombre__persona {
+    font-size: 1.5rem;
+    
+}
+.cumpleaños__dia {
+    font-size: 1rem;
+    
+}
+.nombre__persona,
+.cumpleaños__dia {
+    font-family: var(--fuentePrimaria);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+.cumpleaños__foto {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
