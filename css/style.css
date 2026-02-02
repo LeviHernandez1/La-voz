@@ -1,12 +1,16 @@
 :root {
-    --primario: rgb(156, 156, 212);
+    --primario: rgb(123, 123, 242);
     --blanco: white;
     --gris: rgb(95, 93, 93);
     --negro: black;
+    --footer: rgb(106, 108, 108);
+    --azul: rgb(25, 25, 254);
+    --rojo: rgb(219, 102, 102);
 
     /** Fuentes principales **/
     --fuentePrimaria: "Montserrat", sans-serif;
     --fuenteSecundaria: "Birthstone Bounce", cursive;
+    --fuenteContenidos: "Roboto Mono", monospace;
 }
 
 /** Snipet **/
@@ -17,6 +21,7 @@ html {
     /** 1 rem es 10px **/
 }
 
+/* --------------- GOLBALES --------------- */
 *,
 *:before,
 *:after {
@@ -54,32 +59,21 @@ img {
     max-width: 100%;
 }
 
-/* Cajas de contenidos principales */
+/** ---------------- Header  ---------------- **/
 
-.cursiva,
-.seccion1__contenedor,
-.cursiva__cumpleaños {
-    margin: 0;
-    /* margen para el texto*/
-    font-size: 8rem;
-    color: var(--negro);
-    font-family: var(--fuenteSecundaria);
-    margin: 0 0 1rem 0;
-}
-
-/** Header **/
 .header {
     display: flex;
     justify-content: center;
     padding: 0;
-    
+
 }
+
 @media (min-width: 768px) {
     .header {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-}
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
 }
 
 .header__logo {
@@ -94,37 +88,68 @@ img {
     display: block;
     margin: 2rem auto;
 }
+
 @media (min-width: 768px) {
     .header__logo--img {
-    width: 100%;
-    display: block;
-    margin: 2rem ;
-}
+        width: 100%;
+        display: block;
+        margin: 2rem;
+    }
 }
 
-/** footer **/
+/** ---------------- footer ---------------- **/
+
 .footer {
-    background-color: var(--gris);
-    padding: 2rem 0;
-    margin-top: 1rem;
+    background-color: var(--footer);
     text-align: center;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        margin-top: auto;
+        position: relative;
+        top: 0;
+        background-color: var(--footer);
+        text-align: center;
+
+    }
+}
+.correo {
+    display: flex;
+    /* Pone el botón y el puntero en la misma línea */
+    justify-content: center;
+    /* Centra el grupo horizontalmente */
+    align-items: center;
+    /* Alinea verticalmente el puntero con el botón */
+    gap: 2rem;
+    /* Espacio opcional entre el botón y el puntero */
+    padding: 2rem 0 0 0 ;
+
+}
+
+.icon--sobre {
+
+    width: 4rem;
 }
 
 .footer__texto {
     font-family: var(--fuentePrimaria);
     font-size: 1.5rem;
     color: var(--blanco);
+    padding: 1rem 0 0 1rem;
+    margin-top: 0;
 }
 
-/** Navegación **/
+/* ---------------- Navegación ---------------- */
 .navegacion {
     background-color: var(--blanco);
     padding: 1rem 0;
     display: flex;
     justify-content: center;
     gap: 5rem;
-    
+
 }
+
 @media (max-width: 768px) {
     .navegacion {
         display: grid;
@@ -140,7 +165,8 @@ img {
     color: var(--negro);
     gap: 2rem;
     text-transform: uppercase;
-    margin: 0rem auto; /* Quitamos los margenes de los textos para hacerlos compactos*/
+    margin: 0rem auto;
+    /* Quitamos los margenes de los textos para hacerlos compactos*/
 }
 
 .navegacion__enlace--activo,
@@ -160,22 +186,22 @@ img {
 }
 
 .icon {
-    width: 2rem;
+    width: 3rem;
 }
 
-
-/* ------------------ PAGINA DE CUMPLEAÑOS ------------------ */
-/** Primer contenedor index **/
-.seccion1 {
+/* ----------------- Paguina de INICIO ----------------- */
+.seccion__inicio {
     display: flex;
     justify-content: center;
     padding: 0 0 3rem 0;
 }
 
-.grid__caja {
+.grid__caja--inicio {
 
-    border: 0.1rem solid black;              /* Borde exterior */
-    box-shadow: inset 0 0 0 0.2rem black;    /* Borde interno */
+    border: 0.1rem solid black;
+    /* Borde exterior */
+    box-shadow: inset 0 0 0 0.2rem black;
+    /* Borde interno */
 
     position: relative;
     display: grid;
@@ -189,76 +215,77 @@ img {
 
     /* Imagen de fondo en el contenedor */
     background-image: url(../img/mesa.svg);
-    background-size: cover;        /* Hace que cubra todo el contenedor */
-    background-position: center;   /* Centra la imagen */
-    background-repeat: no-repeat;  /* Evita que se repita */
+    background-size: cover;
+    /* Hace que cubra todo el contenedor */
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que se repita */
 }
 
 @media (min-width: 768px) {
-    .grid__caja {
+    .grid__caja--inicio {
 
-    border: 0.1rem solid black;              /* Borde exterior */
-    box-shadow: inset 0 0 0 0.2rem black;    /* Borde interno */
+        border: 0.1rem solid black;
+        /* Borde exterior */
+        box-shadow: inset 0 0 0 0.2rem black;
+        /* Borde interno */
 
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    width: 90%;
-    background-color: var(--blanco);
-    padding: 1rem;
-    border-radius: 1rem;
-
-    /* Imagen de fondo en el contenedor */
-    background-image: url(../img/mesa.svg);
-    background-size: cover;        /* Hace que cubra todo el contenedor */
-    background-position: center;   /* Centra la imagen */
-    background-repeat: no-repeat;  /* Evita que se repita */
-}
-}
-
-.texto__caja--auto {
-    align-items: center;
-    width: fit-content;
-    height: auto;
-    padding: 0.4rem 1rem;
-    white-space: nowrap;
-    justify-self: start; 
-    display: flex;
-    height: 3rem;
-    border: 2px solid black;
-    border-radius: 1rem;
-    background-color: var(--negro);
-    color: var(--blanco);
-    font-family: var(--fuentePrimaria);
-    text-transform: uppercase;
-}
-@media (min-width: 768px) {
-    .texto__caja {
-        display: flex;
-        justify-content: center;
-        width: 22rem;
-        height: 3rem;
-        border: 2px solid black;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        width: 90%;
+        background-color: var(--blanco);
+        padding: 1rem;
         border-radius: 1rem;
-        background-color: var(--negro);
+
+        /* Imagen de fondo en el contenedor */
+        background-image: url(../img/mesa.svg);
+        background-size: cover;
+        /* Hace que cubra todo el contenedor */
+        background-position: center;
+        /* Centra la imagen */
+        background-repeat: no-repeat;
+        /* Evita que se repita */
     }
 }
 
-.texto__relleno {
-    margin: 0;
-    /* Margen para el texto */
-    font-family: var(--fuentePrimaria);
-    text-transform: uppercase;
-    color: var(--blanco);
+.puerquito {
+    position: relative;
+    width: 80%;
+    justify-self: center;
+}
 
+.mes__img {
+    position: relative;
+    justify-self: center;
+}
+
+.boton__puntero {
+    display: flex;
+    /* Pone el botón y el puntero en la misma línea */
+    justify-content: center;
+    /* Centra el grupo horizontalmente */
+    align-items: center;
+    /* Alinea verticalmente el puntero con el botón */
+    gap: 0rem;
+    /* Espacio opcional entre el botón y el puntero */
+    width: 100%;
+}
+
+.puntero {
+    justify-self: start;
+    position: relative;
+    width: 4rem;
 }
 
 .botonCumpleaños {
-   /* display: grid;
+    display: table;
     align-items: center;
-    width: 25rem; */
+    width: 15rem;
 }
+
 .botonCumpleaños__boton {
     text-transform: uppercase;
     padding: 14px 28px;
@@ -272,61 +299,9 @@ img {
     box-shadow: 0 8px 20px rgba(255, 111, 145, 0.45);
 }
 
-/** GRID calendario cumpleaños **/
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 1rem;
-    row-gap: 1rem;
-    padding: 0 0 3rem 0;
-    /** Separacion abajo **/
-}
-
-@media (min-width: 768px) {
-    .grid {
-        grid-template-columns: repeat(7, 1fr);
-    }
-}
-
-/** Cumpleaños **/
-
-.seccionCumpleaños {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.calendario {
-    background-color: var(--gris);
-    padding: 1rem;
-}
-
-.cumpleaños {
-    background-color: var(--blanco);
-    padding: 0.5rem;
-}
-
-.nombre__persona {
-    font-size: 2rem;
-
-}
-
-.cumpleaños__dia {
-    font-size: 1.5rem;
-
-}
-
-.nombre__persona,
-.cumpleaños__dia {
-    font-family: var(--fuentePrimaria);
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-
-}
-
-.cumpleaños__foto {
-    width: 100%;
-    height: auto;
-    display: block;
+.chocolates {
+    position: relative;
+    width: 70%;
+    justify-self: flex-end;
+    align-self: end;
 }
