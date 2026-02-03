@@ -1,0 +1,62 @@
+/* ----------------- Paguina de TIEMPO LIBRE ----------------- */
+.seccion__tiempo_libre {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 3rem 0;
+}
+
+.grid__caja--tiempo_libre {
+
+    border: 0.1rem solid black;
+    /* Borde exterior */
+    box-shadow: inset 0 0 0 0.2rem black;
+    /* Borde interno */
+
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    width: 90%;
+    background-color: var(--blanco);
+    padding: 1rem;
+    border-radius: 1rem;
+    gap: 2rem;
+
+    /* Imagen de fondo en el contenedor */
+    background-image: url(../img/mesa.svg);
+    background-size: cover;
+    /* Hace que cubra todo el contenedor */
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que se repita */
+}
+
+@media (min-width: 768px) {
+    .grid__caja--tiempo_libre {
+
+        border: 0.1rem solid black;
+        /* Borde exterior */
+        box-shadow: inset 0 0 0 0.2rem black;
+        /* Borde interno */
+
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        width: 90%;
+        background-color: var(--blanco);
+        padding: 1rem;
+        border-radius: 1rem;
+
+        /* Imagen de fondo en el contenedor */
+        background-image: url(../img/mesa.svg);
+        background-size: cover;
+        /* Hace que cubra todo el contenedor */
+        background-position: center;
+        /* Centra la imagen */
+        background-repeat: no-repeat;
+        /* Evita que se repita */
+
+    }
+}

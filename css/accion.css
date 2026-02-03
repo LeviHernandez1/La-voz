@@ -1,0 +1,159 @@
+/* ----------------- Paguina de INICIO ----------------- */
+.seccion__accion {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 3rem 0;
+}
+
+.grid__caja--accion {
+
+    border: 0.1rem solid black;
+    /* Borde exterior */
+    box-shadow: inset 0 0 0 0.2rem black;
+    /* Borde interno */
+
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    width: 90%;
+    background-color: var(--blanco);
+    padding: 1rem;
+    border-radius: 1rem;
+    gap: 2rem;
+
+    /* Imagen de fondo en el contenedor */
+    background-image: url(../img/mesa.svg);
+    background-size: cover;
+    /* Hace que cubra todo el contenedor */
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que se repita */
+}
+
+@media (min-width: 768px) {
+    .grid__caja--inicio {
+
+        border: 0.1rem solid black;
+        /* Borde exterior */
+        box-shadow: inset 0 0 0 0.2rem black;
+        /* Borde interno */
+
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        width: 90%;
+        background-color: var(--blanco);
+        padding: 1rem;
+        border-radius: 1rem;
+
+        /* Imagen de fondo en el contenedor */
+        background-image: url(../img/mesa.svg);
+        background-size: cover;
+        /* Hace que cubra todo el contenedor */
+        background-position: center;
+        /* Centra la imagen */
+        background-repeat: no-repeat;
+        /* Evita que se repita */
+
+    }
+}
+
+.accion__img {
+    width: 85%;
+    display: grid;
+    grid-column: 1 / 4;
+    justify-self: center;
+}
+
+.cuadro__azul,
+.cuadro__rojo {
+    width: 100%;
+    justify-self: center;
+    font-family: var(--fuenteContenidos);
+    color: var(--blanco);
+    border-radius: 2rem;
+    border: 0.3rem solid black;
+    /* Mantiene el contorno actual */
+    border-bottom: 2rem solid black;
+    /* Sobrescribe solo la parte de abajo */
+    padding: 1.6rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.cuadro__rojo {
+    background-color: var(--rojo);
+}
+
+@media (max-width: 768px) {
+    .cuadro__rojo {
+        width: 80%;
+        display: flex;
+        grid-column: 1 / 4;
+        font-size: 1.2rem;
+    }
+}
+
+.cuadro__azul {
+    background-color: var(--azul);
+}
+
+@media (max-width: 768px) {
+    .cuadro__azul {
+        width: 80%;
+        display: flex;
+        font-size: 1.2rem;
+    }
+}
+
+/* Funcion de Ventana */
+.seccion__azul {
+    justify-self: center;
+    height: 30rem;
+    /* altura de la ventana */
+    overflow-y: scroll;
+    /* Activa el scroll vertical */
+    display: flex;
+    flex-direction: column;
+    padding-right: 0rem;
+    /* Espacio para que el scroll no toque el cuadro */
+    gap: 0rem;
+
+    /* 1. ATACA AQUÍ: El padding genera el hueco entre el texto y la barra */
+    padding-right: 0rem;
+}
+
+@media (max-width: 768px) {
+    .seccion__azul {
+        /* Esto hace que el elemento ocupe de la línea 1 a la 4 */
+        grid-column: 1 / 4;
+        /* Mantenemos tus propiedades de ventana con scroll */
+        height: 30rem;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        padding-right: 0.5rem;
+    }
+}
+
+/* Opcional: Personalizar la barra de scroll para que se vea más limpia */
+.seccion__azul::-webkit-scrollbar {
+    width: 8px;
+}
+
+.seccion__azul::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 1rem;
+}
+
+@media (max-width: 768px) {
+    .directivos__img {
+        display: flex;
+        grid-column: 1 / 4;
+        width: 80%;
+        justify-self: center;
+    }
+}
